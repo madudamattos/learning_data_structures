@@ -17,11 +17,13 @@ typedef struct arvore Abb;
 
 typedef struct aluno Aluno;
 
-Aluno* criaAluno(char* nome);
+Aluno* criaAluno(char* nome, int matricula);
+
+Aluno* retornaAlunoNo(Abb* a);
 
 void imprimeAluno(Aluno* aluno);
 
-void liberaALuno(Aluno* aluno);
+void liberaAluno(Aluno* aluno);
 
 Abb* cria_arv();
 
@@ -31,8 +33,8 @@ Abb* insere_arv(Abb* a, Aluno* s);
 
 Abb* busca_arv(Abb* a, int chave);
 
-Abb* retira_arv(Abb* a, int v);
+Abb* retira_arv(Abb* a, int chave);
 
-Abb* libera_arv(Abb* a);
+void libera_arv(Abb* a);
 
 #endif //  ABB_H
