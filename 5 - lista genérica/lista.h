@@ -2,6 +2,7 @@
 #define LISTAGEN_H_
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct listagen ListaGen;
 

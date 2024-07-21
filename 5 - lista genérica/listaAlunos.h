@@ -3,7 +3,8 @@
 
 #include <stdio.h>
 #include "aluno.h"
-#include "listagen.h"
+#include "lista.h"
+
 
 ListaGen* retiraAluno(ListaGen* lista, int matricula);
 
