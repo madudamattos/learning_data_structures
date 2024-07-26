@@ -51,13 +51,13 @@ int main() {
     libera_arv(arvore);
 
     // Libera os alunos (caso não tenham sido liberados pela árvore)
-    // liberaALuno(aluno1);
-    // liberaALuno(aluno2);
-    // liberaALuno(aluno3);
-    // liberaALuno(aluno4);
-    // liberaALuno(aluno5);
-    // liberaALuno(aluno6);
-    // liberaALuno(aluno7);
+    liberaALuno(aluno1);
+    liberaALuno(aluno2);
+    liberaALuno(aluno3);
+    liberaALuno(aluno4);
+    liberaALuno(aluno5);
+    liberaALuno(aluno6);
+    liberaALuno(aluno7);
 
     return 0;
 }
