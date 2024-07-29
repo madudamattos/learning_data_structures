@@ -57,6 +57,8 @@ int main(){
 
     fclose(arquivo);
 
+    libera_arv(a);
+
     return 0;
 }
 

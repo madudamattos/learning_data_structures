@@ -35,8 +35,9 @@ void destroiAluno(Aluno *aluno) {
 
 int comparacaoMat(Aluno *aluno, int* mat) {
   // retorna 0 se forem iguais
-  if (aluno->mat == *mat)
+  if (aluno->mat == *mat){
     return 0;
+  }
 
   // retorna 1 se forem diferentes
   return 1;

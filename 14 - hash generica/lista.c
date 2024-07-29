@@ -50,9 +50,8 @@ Lista *retiraLista(Lista *l, int (*cb)(void *, void *), void *chave) {
 
 // retorna um ponteiro para o objeto encontrado, caso contrario retorna NULL
 Lista *buscaNaLista(Lista *l, int (*cb)(void *, void *), void *chave) {
-  Lista *lista;
 
-  for (lista = l; lista != NULL; lista = lista->prox) {
+  for (Lista* lista = l; lista != NULL; lista = lista->prox) {
     int r = cb(l->info, chave);
     if (r == 0)
       return lista;
@@ -72,10 +71,10 @@ void imprimeLista(Lista *l, void (*cb)(void *)) {
 // libera lista
 // nao libera os itens, responsabilidade do cliente
 void liberaLista(Lista *l) {
-  Lista *lista;
+  Lista *lista = l;
   Lista *temp;
 
-  for (lista = l; lista != NULL; lista = lista->prox) {
+  while(lista) {
     temp = lista->prox;
     free(lista);
     lista = temp;

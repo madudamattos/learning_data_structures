@@ -88,3 +88,11 @@ int tamanhoPalavra(char* p){
 int comparaNomes(char* nome1, char* nome2) {
     return strcmp(nome1, nome2);
 }
+
+void libera_arv(Arv* a){
+    if(!a) return;
+    libera_arv(a->dir);
+    libera_arv(a->esq);
+    free(a->nome);
+    free(a);
+}

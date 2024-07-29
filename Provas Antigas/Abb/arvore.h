@@ -25,3 +25,5 @@ void incrementaPresenca(Arv* a);
 int tamanhoPalavra(char* p);
 
 int comparaNomes(char* nome1, char* nome2);
+
+void libera_arv(Arv* a);

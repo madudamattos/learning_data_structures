@@ -86,10 +86,10 @@ Abb *retira_arv(Abb *arv, int (*comp)(void *, void *), void *conteudo) {
       while (ant->dir)
         ant = ant->dir;
       // faz a troca das informacoes
-      void *aux = arv->conteudo;
+      
       arv->conteudo = ant->conteudo;
-      ant->conteudo = aux;
-      arv->esq = retira_arv(arv->esq, comp, ant->conteudo);
+      ant->conteudo = conteudo;
+      arv->esq = retira_arv(arv->esq, comp, conteudo);
     }
   }
 

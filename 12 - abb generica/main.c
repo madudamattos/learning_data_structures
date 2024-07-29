@@ -24,10 +24,6 @@ int main(void) {
   Aluno* aluno6 = iniciaAluno("Frank", 6);
   Aluno* aluno7 = iniciaAluno("Grace", 7);
 
-
-  printf("%d %d %d", comparaMatricula(aluno1, aluno2), comparaMatricula(aluno3, aluno2), comparaMatricula(aluno5, aluno5));
-
-
   // Cria uma árvore
   Abb* arvore = cria_arv();
 

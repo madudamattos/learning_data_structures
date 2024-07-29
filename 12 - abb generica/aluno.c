@@ -35,6 +35,7 @@ void liberaAluno (Aluno* aluno){
 }
 
 int comparaMatricula(Aluno* aluno1, Aluno* aluno2){
+    printf("Aluno 1: %s Mat: %d // Aluno2: %s  Mat: %d\n ", aluno1->nome, aluno1->mat, aluno2->nome, aluno2->mat);
     if(aluno1->mat > aluno2->mat) return 1;
     else if(aluno1->mat < aluno2->mat) return -1;
     else return 0;

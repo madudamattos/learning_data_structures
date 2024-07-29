@@ -42,17 +42,17 @@ void *hash_insere(Hash *thash, void* key, void *objeto, int (*hash)(void *), int
 
   // usa a funcao de hash para gerar o indice da tabela correspondente a chave
   int indice = hash(key);
-
+  
   // acessa a posicao da tabela hash e insere na lista
-  Lista *l = thash->vetor[indice];
-
-  thash->vetor[indice] = insereLista(l, objeto);
+  thash->vetor[indice] = insereLista(thash->vetor[indice], objeto);
 }
 
 void libera(Hash *table) {
   for (int i = 0; i < table->tam; i++) {
     liberaLista(table->vetor[i]);
   }
+  free(table->vetor);
+  free(table);
 }
 
 void imprime(Hash *thash, void (*cb)(void *)) {
