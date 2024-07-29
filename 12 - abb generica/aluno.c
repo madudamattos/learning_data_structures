@@ -16,7 +16,8 @@ Aluno* iniciaAluno (char* nome, int mat){
     return a;
 }
 
-void imprimeAluno (Aluno* aluno){
+void imprimeAluno (void* a){
+    Aluno* aluno = (void*) a;
     printf("\nNome:%s  Matricula:%d", aluno->nome, aluno->mat);
 }
 
@@ -34,8 +35,9 @@ void liberaAluno (Aluno* aluno){
     free(aluno);
 }
 
-int comparaMatricula(Aluno* aluno1, Aluno* aluno2){
-    printf("Aluno 1: %s Mat: %d // Aluno2: %s  Mat: %d\n ", aluno1->nome, aluno1->mat, aluno2->nome, aluno2->mat);
+int comparaMatricula(void* a1, void* a2){
+    Aluno* aluno1 = (void*) a1;
+    Aluno* aluno2 = (void*) a2;
     if(aluno1->mat > aluno2->mat) return 1;
     else if(aluno1->mat < aluno2->mat) return -1;
     else return 0;
@@ -44,10 +46,10 @@ int comparaMatricula(Aluno* aluno1, Aluno* aluno2){
 
 // generico
 
-int comparaMatriculaGen(void* aluno1, void* aluno2){
-    return comparaMatricula((Aluno *)aluno1, (Aluno *)aluno2);
-}
+// int comparaMatriculaGen(void* aluno1, void* aluno2){
+//     return comparaMatricula((Aluno *)aluno1, (Aluno *)aluno2);
+// }
 
-void imprimeAlunoGen(void* aluno){
-    imprimeAluno((Aluno*) aluno);
-}
+// void imprimeAlunoGen(void* aluno){
+//     imprimeAluno((Aluno*) aluno);
+// }

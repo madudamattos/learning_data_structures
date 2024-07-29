@@ -28,37 +28,37 @@ int main(void) {
   Abb* arvore = cria_arv();
 
   // Insere alunos na árvore
-  arvore = insere_arv(arvore, aluno4, comparaMatriculaGen); 
-  arvore = insere_arv(arvore, aluno2, comparaMatriculaGen);
-  arvore = insere_arv(arvore, aluno6, comparaMatriculaGen);
-  arvore = insere_arv(arvore, aluno1, comparaMatriculaGen);
-  arvore = insere_arv(arvore, aluno3, comparaMatriculaGen);
-  arvore = insere_arv(arvore, aluno5, comparaMatriculaGen);
-  arvore = insere_arv(arvore, aluno7, comparaMatriculaGen);
+  arvore = insere_arv(arvore, aluno4, comparaMatricula); 
+  arvore = insere_arv(arvore, aluno2, comparaMatricula);
+  arvore = insere_arv(arvore, aluno6, comparaMatricula);
+  arvore = insere_arv(arvore, aluno1, comparaMatricula);
+  arvore = insere_arv(arvore, aluno3, comparaMatricula);
+  arvore = insere_arv(arvore, aluno5, comparaMatricula);
+  arvore = insere_arv(arvore, aluno7, comparaMatricula);
 
   // Imprime a árvore
   printf("Árvore após inserções:\n");
-  imprime_arv(arvore, imprimeAlunoGen);
+  imprime_arv(arvore, imprimeAluno);
 
   // Testa remoção de uma folha
   printf("\nRemovendo uma folha (Aluno com matrícula 1):\n");
-  arvore = retira_arv(arvore, comparaMatriculaGen, aluno1);
-  imprime_arv(arvore, imprimeAlunoGen);
+  arvore = retira_arv(arvore, comparaMatricula, aluno1);
+  imprime_arv(arvore, imprimeAluno);
 
   // Testa remoção de um nó com um filho
   printf("\nRemovendo um nó com um filho (Aluno com matrícula 6):\n");
-  arvore = retira_arv(arvore, comparaMatriculaGen, aluno6);
-  imprime_arv(arvore, imprimeAlunoGen);
+  arvore = retira_arv(arvore, comparaMatricula, aluno6);
+  imprime_arv(arvore, imprimeAluno);
 
   // Testa remoção de um nó com dois filhos
   printf("\nRemovendo um nó com dois filhos (Aluno com matrícula 2):\n");
-  arvore = retira_arv(arvore, comparaMatriculaGen, aluno2);
-  imprime_arv(arvore, imprimeAlunoGen);
+  arvore = retira_arv(arvore, comparaMatricula, aluno2);
+  imprime_arv(arvore, imprimeAluno);
 
   // Testa remoção da raiz
   printf("\nRemovendo a raiz (Aluno com matrícula 4):\n");
-  arvore = retira_arv(arvore, comparaMatriculaGen, aluno4);
-  imprime_arv(arvore, imprimeAlunoGen);
+  arvore = retira_arv(arvore, comparaMatricula, aluno4);
+  imprime_arv(arvore, imprimeAluno);
 
   // Libera a árvore
   libera_arv(arvore);

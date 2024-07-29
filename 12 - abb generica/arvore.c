@@ -47,9 +47,9 @@ Abb *busca_arv(Abb *arv, int (*comp)(void *, void *), void *conteudo) {
   if (!arv)
     return NULL;
 
-  if (comp(arv->conteudo, conteudo) > 0) {
+  if (comp(arv->conteudo, conteudo) < 0) {
     return busca_arv(arv->esq, comp, conteudo);
-  } else if (comp(arv->conteudo, conteudo) < 0) {
+  } else if (comp(arv->conteudo, conteudo) > 0) {
     return busca_arv(arv->dir, comp, conteudo);
   } else {
     return arv;
@@ -59,9 +59,9 @@ Abb *busca_arv(Abb *arv, int (*comp)(void *, void *), void *conteudo) {
 Abb *retira_arv(Abb *arv, int (*comp)(void *, void *), void *conteudo) {
   if (!arv)
     return NULL;
-  else if (comp(arv->conteudo, conteudo) > 0) {
+  else if (comp(arv->conteudo, conteudo) < 0) {
     arv->esq = retira_arv(arv->esq, comp, conteudo);
-  } else if (comp(arv->conteudo, conteudo) < 0) {
+  } else if (comp(arv->conteudo, conteudo) > 0) {
     arv->dir = retira_arv(arv->dir, comp, conteudo);
   } else {
     // se for folha solta, ai so desaloca
